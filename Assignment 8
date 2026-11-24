@@ -1,1 +1,47 @@
 
+Write a C program / Function to swap two numbers using pointers. 
+8a)Call by reference 
+8b)Call by value 
+8c) Correct the dimensions of the rectangular metal plate .  A workshop operator Accidently entered the length and width of a rectangular metal plate in wrong order Write a C program using a user defined function and pointers to swap the length and width  
+8A) 
+#include <stdio.h> 
+int ChangeRef(int *p) { 
+*p = 100; 
+return *p; 
+} 
+int main() { 
+int b = 20; 
+ChangeRef(&b);
+printf("After Call by reference, b=%d\n", b); return 0; 
+} 
+
+
+8b) 
+#include <stdio.h> 
+int change(int x) { 
+x = 50; 
+return x; 
+} 
+int main() { 
+int a = 10; 
+change(a); 
+printf("After call by value, a=%d\n", a);  return 0; 
+}
+
+8c) 
+#include <stdio.h> 
+void swap(int *a, int *b) { 
+int temp = *a; 
+*a = *b; 
+*b = temp; 
+} 
+int main(void) { 
+int length = 40, width = 20; 
+int area; 
+printf("Before: L=%d, W=%d\n", length, width);  area = length * width; 
+printf("Area = %d sq.cm\n", area); 
+swap(&length, &width);
+printf("After: L=%d, W=%d\n", length, width); area = length * width; 
+printf("Area = %d sq.cm\n", area); 
+return 0; 
+} 
