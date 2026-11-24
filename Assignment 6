@@ -1,1 +1,46 @@
+ARNAV HASTAK 
+1262261016 
+Write a c function to compute the factorial of a number with and without recursion. 
+A)With Recursion 
+Code: 
+#include <stdio.h> 
+int fact_rec(int num); 
+int main() 
+{ 
+int num; 
+int result; 
+printf("Enter the Number:"); 
+scanf("%d" , &num); 
+result=fact_rec(num); 
+printf("Result = %d\n",result); 
+return 0; 
+} 
+int fact_rec(int num) 
+{ 
+if (num == 0 || num == 1)
+return 1; 
+else 
+return num*fact_rec(num-1); 
+} 
 
+B)Without Recursion 
+Code: 
+#include <stdio.h> 
+int factorial(int n) 
+{ 
+int i; 
+int fact = 1; 
+for(i=1; i <= n; i++) 
+{ 
+fact = fact*i; 
+} 
+return fact; 
+}
+int main() 
+{ 
+int num = 5; 
+int result; 
+result = factorial(num); 
+printf("Factorial of %d = %d\n",num,result); 
+return 0; 
+} 
