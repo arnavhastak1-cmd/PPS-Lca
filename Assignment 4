@@ -1,1 +1,87 @@
 
+4a)Write a c program to perform basic operations such as addition of two matrices 
+Code: 
+#include <stdio.h> 
+int main() { 
+ int rows, cols; 
+  
+ printf("Enter the number of rows: "); 
+ scanf("%d", &rows); 
+ printf("Enter the number of columns: "); 
+ scanf("%d", &cols); 
+ int mat1[rows][cols], mat2[rows][cols], result[rows][cols]; 
+  
+ printf("\nEnter elements of the first matrix:\n");  for (int i = 0; i < rows; i++) { 
+ for (int j = 0; j < cols; j++) { // Fixed loop condition (j < cols) 
+ printf("Element [%d][%d]: ", i, j); // Removed stray single quote 
+ scanf("%d", &mat1[i][j]);
+ } 
+ } 
+  
+ printf("\nEnter elements of the second matrix:\n");  for (int i = 0; i < rows; i++) { 
+ for (int j = 0; j < cols; j++) { 
+ printf("Element [%d][%d]: ", i, j);  scanf("%d", &mat2[i][j]); 
+ } 
+ } 
+  
+ for (int i = 0; i < rows; i++) { 
+ for (int j = 0; j < cols; j++) { 
+ result[i][j] = mat1[i][j] + mat2[i][j];  } 
+ } 
+ // 5. Output Result 
+ printf("\nResultant matrix after addition:\n");  for (int i = 0; i < rows; i++) { 
+ for (int j = 0; j < cols; j++) { 
+ printf("%d\t", result[i][j]); 
+ } 
+ printf("\n"); 
+ }
+
+ return 0; 
+} 
+
+
+4b)write a c program to add two matrices(2x2) representing ,measurement data of two machines components and display the resultant measurement matrix 
+Code: 
+#include <stdio.h> 
+int main() 
+{ 
+ int A[2][2],B[2][2],c[2][2]; 
+ int i,j; 
+  
+ printf("Enter measurement data for Machine Component 1:\n"); 
+ for(i = 0; i < 2; i++) 
+ { 
+ for(j = 0; j < 2; j++) 
+ { 
+ scanf("%d",&A[i][j]); 
+ } 
+ } 
+  
+ printf("Enter measurement data for Machine Component 2:\n"); 
+ for(i = 0; i < 2; i++) 
+ {
+ for(j = 0; j < 2; j++) 
+ { 
+ scanf("%d",&B[i][j]); 
+ } 
+ } 
+  
+ for(i = 0; i < 2; i++) 
+ { 
+ for(j = 0; j < 2; j++) 
+ { 
+ c[i][j] = A[i][j] + B[i][j]; 
+ } 
+ } 
+ printf("\nResultanat Measurement Matrix:\n");  for(i = 0; i < 2; i++) 
+ { 
+ for(j = 0; j < 2; j++) 
+ { 
+ printf("%d\t",c[i][j]); 
+ } 
+ printf("\n"); 
+ } 
+  
+ return 0; 
+} 
+
